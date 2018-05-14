@@ -1,0 +1,163 @@
+/* #region geral */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body, p {
+    margin: 0;
+}
+
+p {
+    font-size: 0.7 rem;
+    color: #28202f;
+}
+/* #endregion */
+
+/* #region header */
+header {
+    background-image: url("./butterflies-blog-header.jpg");
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: #28202f;
+    margin-bottom: calc(5px + 5vh);
+}
+
+h1{
+    margin-right: calc(5px + 0.5rem);
+}
+/* #endregion */
+
+/* #region main */
+/* main geral */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc(5px + 5vh);
+}
+.container {
+    position: relative;
+    width: calc(100px + 10vw);
+    height: calc(100px + 10vw);
+    margin: auto;
+}
+img {
+width: 100%;
+}
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.texto {
+    background-color: #bf73c4;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone-texto {
+    background-color: #bf73c4;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone-texto img {
+    width: initial;
+    max-height: 40%;
+}
+
+/* na vertical */
+.container:hover .overlay-vertical {
+    height: 100%;
+}
+/* para cima */
+.overlay-cima {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: #45018c;
+overflow: hidden;
+width: 100%;
+height: 0;
+transition: .5s ease;
+}
+
+/* para baixo */
+.overlay-baixo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #45018c;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    }
+    
+/* na horizontal */
+.container:hover .overlay-horizontal {
+    width: 100%;
+}
+/* para direita */
+.overlay-direita {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    background-color: #45018c;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    }
+
+/* para esqueda */
+.overlay-esquerda {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    background-color: #45018c;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    }
+
+/* #endregion */
+
+/*#region layout da página */
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 90vw;
+    grid-row-gap: calc(10px + 2vw);
+}
+@media(min-width:768px) {
+    .grid {
+        grid-template-areas: 
+    }
+}
+/* #endregion */
